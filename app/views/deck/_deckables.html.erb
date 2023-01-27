@@ -1,0 +1,23 @@
+<% @deck.deckables.each do |deckables| %>
+    <% card = deckables.card %>
+    <div id="<%= "deck-#{card.id}"  %>" >
+        <div>
+            <strong>Name:</strong>
+            <%= card.name %>
+            <strong>Categoty:</strong>
+            <%= card.categoty %>
+            <br>
+            <%= form_with(url: deck_add_path) do |f|  %>
+                <%= f.hidden_field :id, value: card.id %>
+                <%= f.number_field :quantity, value: deckables.quantity, min: 0%>
+                <%= f.submit "Add to Deck" %>
+            <% end %>
+            <%= form_with(url: deck_remove_path) do |f|  %>
+                <%= f.hidden_field :id, value: deckables.id %>
+                <%= f.submit "Remove" %>
+            <% end %>
+            <strong>Total</strong>
+            <%= deckables.total %>
+        </div>
+    </div>
+<% end %>

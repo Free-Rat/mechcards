@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  categoty: MyString
+  generation: MyString
+  armor: 1
+  damage: 1
+  crit: 1
+  discription: MyString
+
+two:
+  name: MyString
+  categoty: MyString
+  generation: MyString
+  armor: 1
+  damage: 1
+  crit: 1
+  discription: MyString

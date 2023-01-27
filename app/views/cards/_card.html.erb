@@ -1,0 +1,27 @@
+<div id="<%= dom_id card %>" >
+  <div>
+    <strong>Name:</strong>
+    <%= card.name %>
+    <strong>Categoty:</strong>
+    <%= card.categoty %>
+    <br>
+    <strong>Generation:</strong>
+    <%= card.generation %>
+    <strong>Armor:</strong>
+    <%= card.armor %>
+    <strong>Damage:</strong>
+    <%= card.damage %>
+    <strong>Crit:</strong>
+    <%= card.crit %>
+    <br>
+    <strong>Discription:</strong>
+    <%= card.discription %>
+
+    <%= form_with(url: deck_add_path) do |f|  %>
+      <%= f.hidden_field :id, value: card.id %>
+      <%= f.number_field :quantity, value: 0, min: 1 %>
+      <%= f.submit "Add to Deck" %>
+    <% end %>
+  </div>
+
+</div>

@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  card: one
+  deck: one
+  quantity: 1
+
+two:
+  card: two
+  deck: two
+  quantity: 1

@@ -18,11 +18,10 @@
   </head>
 
   <body>
-    <%
-=begin%>
- <%= render 'home/header' %> 
-<%
-=end%>
+    <%= render 'home/header' %>
+
+     <%= render partial: 'deck/deck' if @render_deck %> 
+
     <div class="container">
       <br/>
       <% if notice %>

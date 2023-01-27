@@ -1,0 +1,9 @@
+<%= turbo_frame_tag "deck" do %>
+    <h1> Deck <h1/>
+    <% if @deck.deckables.count > 0 %>
+        <%= render "deck/deckables" %>
+        <p>Carts number:<%= @deck.total %> </p>
+    <% else %>
+        <p> Your deck is empty </p>    
+    <% end %>
+<% end %>
